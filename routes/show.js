@@ -5,7 +5,7 @@ router.get('/:uuid',async (req, res) =>{
     try{
         const file = await File.findOne({ uuid: req.params.uuid})
         if(!file){
-            return res.render('../download',{ error:'Link Has Been Expired.'})
+            return res.render('download',{ error:'Link Has Been Expired.'})
         }
         return res.render('download',{
             uuid: file.uuid,
@@ -14,7 +14,7 @@ router.get('/:uuid',async (req, res) =>{
             downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
         })
     }catch(err) {
-        return res.render('../download',{ error:'Something went Wrong.'})
+        return res.render('download',{ error:'Something went Wrong.'})
     }
 });
 
