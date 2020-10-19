@@ -46,7 +46,7 @@ $ NODE_ENV=production node app
 ### Development
 
 Want to contribute? Great!
-Clone the git hub file and submit a pull request
+Clone the git hub file and submit a pull request most probally i will be looking into it and merge it
 
 ### Todos
 

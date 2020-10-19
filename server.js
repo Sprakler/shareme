@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const fs = require('fs')
 
-
+// Connect To PORT of available in ENV or set it to default to 3000
 const PORT = process.env.PORT || 3000;
 
 const connectDB = require('./config/db')
@@ -27,7 +27,8 @@ async function fetchData() {
     }
     console.log('Job done!');
 }
- 
+
+// This function calls cron module which is up to this
 cron.schedule('59 * * * *', () => {
     fetchData()
 });
@@ -39,11 +40,9 @@ app.use(express.json());
 app.set('views',path.join(__dirname,'/views'))
 app.set('view engine','ejs')
 
-// Routes
+// Routes of Web App
 app.get("/", (req, res)=>{
     res.sendFile(__dirname + 'public/index.html');
-    // console.log(__dirname); 
-    // res.status(200).send("This is homepage of my first express app with Uday");
 });
 app.use('/api/files',require('./routes/files'));
 app.use('/files',require('./routes/show'));
