@@ -8,7 +8,7 @@ Send Files is a cloud based file sharing web-site which enables people to share 
 
 ### New Features!
 
-  - Your Files are no longer saved into server , they are deleted after 24 hours of uploaded and the link gets expired.
+  - Your File are no longer saved into server , they are deleted after 24 hours of uploaded and the link gets expired.
   - Drag and drop files , instead of just uploading now you can also drag and drop the files.
 
 
